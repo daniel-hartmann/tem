@@ -1,0 +1,23 @@
+body {
+}
+
+.main-form-container {
+    padding-top: 10rem;
+    margin: auto;
+    width: 380px;
+}
+
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: 9px;
+}
+
+
+@media all and (min-width: 500px) {
+    .main-form-container {
+      padding-top: 14rem;
+    }
+}
