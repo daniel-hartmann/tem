@@ -76,11 +76,18 @@
       {% if mailform %}
       <form class="form-inline" action="" method="post">
         {% csrf_token %}
-        <div class="form-group">
+        <div class="form-group {% if mailform.email.errors %} input-error{% endif %}">
           {{ mailform.email }}
         </div>
-      
+
         <button type="submit" class="btn btn-primary-outline">Baixar EP</button>
+
+        {% if mailform.email.errors %}
+        <div class="input-error">
+          {{ mailform.email.errors }}
+        </div>
+        {% endif %}
+
       </form>
       {% else %}
       <a href="/ep/" class="btn btn-primary-outline">Baixar EP</button>

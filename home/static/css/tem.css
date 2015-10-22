@@ -1,12 +1,14 @@
 body {
+    background-color: black;
+    background-image: url(/static/img/bg_b_650x934.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
 }
 
 .main-form-container {
     padding-top: 10rem;
     margin: auto;
-    width: 380px;
 }
-
 
 footer {
     position: fixed;
@@ -15,9 +17,26 @@ footer {
     font-size: 9px;
 }
 
+.input-error {
+    color: white;
+}
+
+.btn-primary-outline {
+    color: white;
+    background-color: #444;
+    border-color: black;
+}
+
+.btn-primary-outline:active,
+.btn-primary-outline:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
 
 @media all and (min-width: 500px) {
     .main-form-container {
-      padding-top: 14rem;
+      padding-top: 19rem;
+      width: 310px;
     }
 }

@@ -14,3 +14,19 @@ class MailForm(ModelForm):
                 'type': 'email',
                 }),
             }
+
+    def save(self, ip=None):
+        mails = Mail.objects.filter(email=self.cleaned_data.get('email'))
+        if len(mails):
+            mail = mails[0]
+            mail.downloads += 1
+            mail.save()
+
+        else:
+            mail = super(MailForm, self).save(commit=True)
+
+        if ip:
+            mail.ip = ip
+            mail.save()
+        return mail
+
