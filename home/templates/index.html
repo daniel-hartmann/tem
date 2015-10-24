@@ -73,6 +73,12 @@
     {% block content %}
 
     <div class="main-form-container">
+      <!--
+      <div class="main-logo">
+        <img src="{% static 'img/main-logo.png' %}">
+      </div>
+      -->
+      
       {% if mailform %}
       <form class="form-inline" action="" method="post">
         {% csrf_token %}
@@ -84,7 +90,7 @@
 
         {% if mailform.email.errors %}
         <div class="input-error">
-          {{ mailform.email.errors }}
+          Informe seu e-mail
         </div>
         {% endif %}
 
@@ -92,6 +98,12 @@
       {% else %}
       <a href="/ep/" class="btn btn-primary-outline">Baixar EP</button>
       {% endif %}
+      
+      <div class="greetings">
+        <p>Olá!</p>
+        <p>Agradecemos de coração tua vontade de baixar nosso EP. Isso é fundamental para fortalecer a música independente. Teu e-mail vai ficar numa lista para que a gente possa te comunicar nossa trajetória.</p>
+        <p>Abraços da TEM!</p>
+      </div>
     </div>
 
     {% endblock %}
