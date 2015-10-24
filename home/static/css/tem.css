@@ -3,6 +3,7 @@ body {
     background-image: url(/static/img/bg_b_650x934.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
+    font-family: 'Inconsolata', monospace;
 }
 
 .main-form-container {
@@ -47,7 +48,8 @@ footer {
 }
 
 .btn-primary-outline:active,
-.btn-primary-outline:hover {
+.btn-primary-outline:hover,
+.btn-primary-outline:focus {
     color: white;
     background-color: black;
     border-color: black;
