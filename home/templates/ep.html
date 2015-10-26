@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="main-ep-container">
+  <!--
+  <div class="main-logo">
+    <img src="{% static 'img/main-logo.png' %}">
+  </div>
+  -->
+
+  <ul class="music-list">
+    <li>
+      <a href="{% static '/static/music/1 cacada ao lagarto real.mp3' %}">
+        Caçada ao lagarto real
+      </a>
+    </li>
+    <li>
+      <a href="{% static '/static/music/2 a ultima luta.mp3' %}">
+        A última luta
+      </a>
+    </li>
+    <li>
+      <a href="{% static '/static/music/3 por ora um suco misto.mp3' %}">
+        Por ora, um suco misto
+      </a>
+    </li>
+    <li>
+      <a href="{% static '/static/music/4 farofa de banana tumaraca.mp3' %}">
+        Farofa de banana (tumaracá)
+      </a>
+    </li>
+  </ul>
+
+</div>
+
+{% endblock %}
