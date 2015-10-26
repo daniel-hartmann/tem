@@ -26,11 +26,21 @@ def index(request):
     
     if request.POST and mailform.is_valid():
         if mailform.save(ip=_get_client_ip(request)):
-            epfile = open(EP_FILEPATH)
-            response = HttpResponse(epfile, content_type='application/zip')
-            response['Content-Disposition'] = 'attachment; filename=%s' % smart_str(EP_FILENAME)
-            return response
+            
+            if 'Android' in request.META['HTTP_USER_AGENT'] or \
+                'iPhone' in request.META['HTTP_USER_AGENT']:
+                return HttpResponseRedirect('/ep')
+            else:
+                epfile = open(EP_FILEPATH)
+                response = HttpResponse(epfile, content_type='application/zip')
+                response['Content-Disposition'] = 'attachment; filename=%s' % smart_str(EP_FILENAME)
+                return response
 
+    return HttpResponse(template.render(context))
+
+def ep(request):
+    template = loader.get_template('ep.html')
+    context = RequestContext(request, {})
     return HttpResponse(template.render(context))
 
 def download(request):

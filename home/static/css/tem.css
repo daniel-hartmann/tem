@@ -6,7 +6,8 @@ body {
     font-family: 'Inconsolata', monospace;
 }
 
-.main-form-container {
+.main-form-container,
+.main-ep-container {
     padding-top: 18rem;
     margin: auto;
 }
@@ -19,12 +20,31 @@ body {
 
 .greetings {
     max-width: 330px;
-    text-align: left;
+    text-align: center;
     margin: auto;
     color: #eed;
     font-size: 0.9rem;
     padding: 1rem;
     background: rgba(0,0,0, 0.65);
+}
+
+.main-ep-container {
+    text-align: center;
+}
+
+.main-ep-container ul.music-list {
+    background: rgba(0,0,0, 0.65);
+    max-width: 330px;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.main-ep-container ul.music-list li {
+}
+
+.main-ep-container ul.music-list li a {
+    color: #eed;
 }
 
 footer {
