@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    background-image: url(/static/img/bg_b_650x934.jpg);
+    background-image: url(/static/img/bg_b_655x920.jpg);
     background-repeat: no-repeat;
     background-position: center 0;
     font-family: 'Inconsolata', monospace;
@@ -8,11 +8,12 @@ body {
 
 .main-form-container,
 .main-ep-container {
+    width: 90%;
     padding-top: 18rem;
     margin: auto;
 }
 
-.main-form-container .main-logo {
+.main-logo {
     margin: auto;
     text-align: center;
     margin-bottom: 1rem;
@@ -23,7 +24,7 @@ body {
     text-align: center;
     margin: auto;
     color: #eed;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 1rem;
     background: rgba(0,0,0, 0.65);
 }
@@ -77,7 +78,7 @@ footer {
 
 @media all and (min-width: 500px) {
     .main-form-container {
-      padding-top: 19rem;
+      padding-top: 18rem;
       text-align: center;
     }
 }
